@@ -11,25 +11,28 @@ new Vue({
       status: 'stop',
       last: new Date().getTime(),
       // settings
-      showing: false
+      showing: false,
     }
   },
   computed: {
     isPanicTime () {
       return this.distance < 30 * SECOND && this.status === 'running'
     },
+    getStep() {
+      return this.isPanicTime ? 73 : 10
+    },
     timeLeft () {
       const s = parseInt((this.distance / 1000) % 60)
       const m = parseInt(((this.distance / (1000 * 60)) % 60))
-      const h = parseInt(((this.distance / (1000 * 60 * 60)) % 24))
+      const h = parseInt(((this.distance / (1000 * 60 * 60))))
       if (this.distance <= 0) {
         return `Time's Up!!`
       } else if (h > 0) {
-        return `${h} ชม. ${m} นาที ${s} วินาที`
+        return `${h}h ${m}m ${s}s`
       } else if (m > 0) {
-        return `${m} นาที ${s} วินาที`
+        return `${m}m ${s}s`
       } else {
-        return `${s} วินาที`
+        return `${s}s`
       }
     },
     startStopState () {
@@ -66,9 +69,9 @@ new Vue({
     const bgBottom = document.getElementById('bg')
     let hue1 = 0
     let hue2 = 180
-    setInterval(() => {
-      hue1 += 10 % 360
-      hue2 += 10 % 360
+    let interval = setInterval(() => {
+      hue1 += this.getStep % 360
+      hue2 += this.getStep % 360
       bgTop.style.filter = `hue-rotate(${hue1}deg)`
       bgBottom.style.filter = `hue-rotate(${hue2}deg)`
     }, 100)
