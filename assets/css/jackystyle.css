@@ -174,3 +174,29 @@ h5 {
   font-family: 'Press Start 2P', cursive !important;
   padding: 0.5em 0 !important;
 }
+
+
+#bg-top {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 30vh;
+  background-image: url('../img/template-bg5.png');
+  background-repeat: repeat-x;
+  background-position: center 40%;
+  background-size: contain;
+  transform: rotate(180deg);
+}
+
+#bg {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 40vh;
+  background-image: url('../img/template-bg3.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: contain;
+}

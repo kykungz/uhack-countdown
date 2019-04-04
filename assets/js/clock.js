@@ -61,6 +61,20 @@ new Vue({
       }
     })
     window.addEventListener("beforeunload", this.save)
+
+    const bgTop = document.getElementById('bg-top')
+    const bgBottom = document.getElementById('bg')
+    let hue1 = 0
+    let hue2 = 180
+    setInterval(() => {
+      hue1 += 10 % 360
+      hue2 += 10 % 360
+      bgTop.style.filter = `hue-rotate(${hue1}deg)`
+      bgBottom.style.filter = `hue-rotate(${hue2}deg)`
+    }, 100)
+
+    
+
     // window.addEventListener('blur', () => {
     //   this.save()
     // })
