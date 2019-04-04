@@ -1,0 +1,176 @@
+h2 {
+  line-height: 50px;
+}
+
+h5 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.text-pause {
+  color: rgb(129, 129, 129);
+}
+
+.floating-logo {
+  /* margin: -20px; */
+  /* margin-bottom: -30px; */
+  margin: 20px auto;
+  cursor: pointer;
+  animation: floating 2s ease-in-out infinite;
+  transition: all 300ms;
+}
+
+.floating-logo:hover {
+  filter: brightness(0.8);
+}
+
+.solid-cloud {
+  background: url(../img/cloud2.svg) no-repeat center;
+  background-size: auto 100%;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  z-index: -40;
+}
+
+.bottom {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.temple-wrapper {
+  min-height: 500px;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.temple {
+  position: absolute;
+  bottom: 100px;
+  max-width: 600px;
+  width: 100%;
+  z-index: -1;
+}
+
+.heros {
+  position: absolute;
+  bottom: 80px;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.mountain1 {
+  position: absolute;
+  bottom: -40px;
+  left: -100px;
+  max-width: 500px;
+  width: 100%;
+  z-index: -50;
+}
+
+.mountain2 {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+  max-width: 400px;
+  width: 100%;
+  z-index: -50;
+}
+
+.setting {
+  height: 130px;
+  margin-bottom: 20px;
+  padding: 26px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+}
+
+.clock-input {
+  width: 5rem;
+  height: 4rem;
+}
+
+.clock-control {
+  font-family: 'RSU', sans-serif;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.time {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.panic {
+  animation: panic 200ms ease-in-out infinite;
+}
+
+.shaking {
+  animation: shaking 200ms ease-in-out infinite;
+}
+
+.pulsing {
+  animation: pulsing 300ms ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shaking {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes panic {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes pulsing {
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: rgb(220, 53, 69);
+  }
+}
+
+.subtitle {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 100px;
+}
+
+#countdown {
+  font-family: 'Press Start 2P', cursive !important;
+  padding: 0.5em 0 !important;
+}
