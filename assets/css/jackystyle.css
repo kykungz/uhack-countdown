@@ -175,7 +175,6 @@ h5 {
   padding: 0.5em 0 !important;
 }
 
-
 #bg-top {
   z-index: -1;
   position: fixed;
@@ -199,4 +198,16 @@ h5 {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: contain;
+}
+
+.spon {
+  max-height: 60px;
+  border-radius: 4px;
+}
+
+.spon-padding {
+  max-height: 60px;
+  border-radius: 4px;
+  background: white;
+  padding: 8px;
 }
