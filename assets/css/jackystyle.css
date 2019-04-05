@@ -201,12 +201,12 @@ h5 {
 }
 
 .spon {
-  max-height: 60px;
+  max-height: 100px;
   border-radius: 4px;
 }
 
 .spon-padding {
-  max-height: 60px;
+  max-height: 100px;
   border-radius: 4px;
   background: white;
   padding: 8px;
